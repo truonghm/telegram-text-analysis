@@ -12,7 +12,7 @@ import src.pages.overview
 import src.pages.time
 from src.utils import *
 
-github_root = 'https://media.githubusercontent.com/media/truonghm/telegram-text-analysis/master'
+github_root = 'https://media.githubusercontent.com/media/truonghm/telegram-text-analysis/master/'
 
 try:
     # Before Streamlit 0.65
