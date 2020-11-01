@@ -55,7 +55,7 @@ def page_data_state(state):
     import_state_values(state)
 
 def page_overview(state):
-    # return src.pages.overview.write(state['text_df'])
+    return src.pages.overview.write(state['text_df'])
 
 def page_time(state):
     return src.pages.time.write(state['text_df'])
