@@ -12,7 +12,7 @@ import src.pages.overview
 import src.pages.time
 from src.utils import *
 
-
+github_root = 'https://media.githubusercontent.com/media/truonghm/telegram-text-analysis/master'
 
 try:
     # Before Streamlit 0.65
@@ -62,7 +62,7 @@ def page_time(state):
 
 def import_state_values(state):
     if st.button("Get dataframe"):
-        state['text_df'] = get_data(filepath='data/text_df.csv', columns=None, head=None)
+        state['text_df'] = get_data(filepath=github_root + 'data/text_df.csv', columns=None, head=None)
 
 def display_state_values(state):
     if state['text_df'] is not None:
