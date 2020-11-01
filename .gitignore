@@ -1,6 +1,6 @@
 # data
 *.json
-text_df.csv
+#text_df.csv
 *.Rproj
 *.code-workspace
 *.pbix
