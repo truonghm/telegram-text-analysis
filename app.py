@@ -12,7 +12,8 @@ import src.pages.overview
 import src.pages.time
 from src.utils import *
 
-github_root = 'https://media.githubusercontent.com/media/truonghm/telegram-text-analysis/master/'
+dir_root = 'https://media.githubusercontent.com/media/truonghm/telegram-text-analysis/master/'
+# dir_root = 'D:/OneDrive/Personal/OneDrive/Projects/telegram_text/'
 
 try:
     # Before Streamlit 0.65
@@ -30,7 +31,7 @@ def main():
     "Data state": page_data_state,
     "Overview": page_overview,
     "Texting through time":page_time,
-    "Media": src.pages.media
+    "Media": page_media
     }
 
     st.sidebar.title("Navigation")
@@ -60,15 +61,23 @@ def page_overview(state):
 def page_time(state):
     return src.pages.time.write(state['text_df'])
 
+def page_media(state):
+    return src.pages.media.write(state['stickers_df'])
+
 def import_state_values(state):
     if st.button("Get dataframe"):
-        state['text_df'] = get_data(filepath=github_root + 'data/text_df.csv', columns=None, head=None)
+        state['text_df'] = dir_root + 'data/text_df.csv'
+        state['stickers_df'] = dir_root + 'data/stickers_df.csv'
+        # state['text_df'] = get_data(filepath=dir_root + 'data/text_df.csv', columns=None, head=None)
 
 def display_state_values(state):
-    if state['text_df'] is not None:
+    st.write('Sticker dataframe:', state['stickers_df'])
+    if isinstance(state['text_df'], pd.DataFrame):
         st.write(state['text_df'].head(5))
+    elif state['text_df'] is not None:
+        st.write('Text dataframe: ', state['text_df'])
     else:
-        st.write('Import dataframe to display')
+        st.write('Text dataframe: ', None)
 
     if st.button("Clear state"):
         state.clear()

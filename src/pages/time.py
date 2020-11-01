@@ -1,9 +1,6 @@
 import altair as alt
 import streamlit as st
 
-from src.utils import get_data
-
-@st.cache
 def write(df):
     """Used to write the page in the app.py file"""
     with st.spinner("Loading Texting through time Page---"):
