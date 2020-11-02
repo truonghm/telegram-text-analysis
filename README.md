@@ -4,7 +4,7 @@ Analyze messages sent through Telegram using Python & deployed to web app with S
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/truonghm/)
 
-## Dependencies
+## Dependencies :construction:
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
 [![Streamlit 0.68](https://img.shields.io/badge/streamlit-0.68-red.svg)](https://discuss.streamlit.io/t/version-0-68-0-the-1-year-anniversary-release/6116)
 
@@ -16,7 +16,7 @@ Analyze messages sent through Telegram using Python & deployed to web app with S
 
 ## TODO :runner:
 - [X] Finish text mining portion of the project
-- [X] Finish visualization
+- [X] Finish visualization 
 - [X] Enable csv file uploading
 - [X] Create tool to convert from json format to csv format
 - [X] Expand to other messaging platforms
