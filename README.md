@@ -11,7 +11,7 @@ Analyze messages sent through Telegram using Python & deployed to web app with S
 ## References :notebook:
 - [Text mining with R](https://www.tidytextmining.com/)
 - [Streamlit Documentation](https://docs.streamlit.io/)
-- The [Awesome Streamlit](https://awesome-streamlit.org/) Project ([Github repo](https://github.com/MarcSkovMadsen/awesome-streamlit)
+- The [Awesome Streamlit](https://awesome-streamlit.org/) Project ([Github repo](https://github.com/MarcSkovMadsen/awesome-streamlit))
 - [Discussion thread](https://discuss.streamlit.io/t/multi-page-app-with-session-state/3074) about session state for multipage app
 
 ## TODO :runner:
