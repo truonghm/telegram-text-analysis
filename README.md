@@ -1,6 +1,6 @@
 # Telegram Text Message Analysis
 
-Analyze messages sent through Telegram using Python & deployed to web app with Streamlit/Streamlit Sharing.
+Analyze messages sent through Telegram using Python. Deployed with Streamlit.
 
 [![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/truonghm/)
 
