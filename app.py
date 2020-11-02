@@ -56,28 +56,29 @@ def page_data_state(state):
     import_state_values(state)
 
 def page_overview(state):
-    return src.pages.overview.write(state['text_df'])
+    return src.pages.overview.write(state)
 
 def page_time(state):
-    return src.pages.time.write(state['text_df'])
+    return src.pages.time.write(state)
 
 def page_media(state):
-    return src.pages.media.write(state['stickers_df'])
+    return src.pages.media.write(state)
 
 def import_state_values(state):
     if st.button("Get dataframe"):
-        state['text_df'] = dir_root + 'data/text_df.csv'
+        state['text_url'] = dir_root + 'data/text_df.csv'
         state['stickers_df'] = dir_root + 'data/stickers_df.csv'
-        # state['text_df'] = get_data(filepath=dir_root + 'data/text_df.csv', columns=None, head=None)
+        state['text_df'] = get_data(filepath=dir_root + 'data/text_df.csv', columns=None, head=None)
 
 def display_state_values(state):
-    st.write('Sticker dataframe:', state['stickers_df'])
+    st.write('**Sticker dataframe URL**:', state['stickers_df'])
+    st.write('**Text dataframe URL**:', state['text_url'])
     if isinstance(state['text_df'], pd.DataFrame):
         st.write(state['text_df'].head(5))
     elif state['text_df'] is not None:
-        st.write('Text dataframe: ', state['text_df'])
+        st.write('**Text dataframe**: ', state['text_df'])
     else:
-        st.write('Text dataframe: ', None)
+        st.write('**Text dataframe**: ', None)
 
     if st.button("Clear state"):
         state.clear()

@@ -79,12 +79,12 @@ text_df['sticker_url'] = np.where(text_df['media_type']=='sticker',
 #                                    np.nan)
 
 # text_df['date_int'] = pd.to_numeric(text_df['datetime'].dt.strftime('%Y%m%d'), errors='coerce')
-# text_df['month_int'] = pd.to_numeric(text_df['datetime'].dt.strftime('%Y%m'), errors='coerce')
-# text_df['year_int'] = text_df['datetime'].dt.year
+text_df['month'] = text_df['datetime'].dt.strftime('%Y%m')
+text_df['year'] = text_df['datetime'].dt.year.astype('str')
 
 cols = ['date','from','media_type',
         'datetime','text2','word_count','isLDR','daypart','datetime_next','buffer',
-        'sticker_url']
+        'sticker_url','month','year']
 text_df[cols].to_csv(home_path + '/data/text_df.csv', index=False)
 
 stickers_df = text_df[text_df['media_type']=='sticker'].groupby(['sticker_url','from']).agg({'from_id':'count'}).reset_index()
