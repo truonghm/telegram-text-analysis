@@ -6,7 +6,7 @@ Analyze messages sent through Telegram using Python & deployed to web app with S
 
 ## Dependencies :construction:
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)](https://www.python.org/downloads/release/python-380/)
-[![Streamlit 0.68](https://img.shields.io/badge/streamlit-0.68-red.svg)](https://discuss.streamlit.io/t/version-0-68-0-the-1-year-anniversary-release/6116)
+[![Streamlit 0.68](https://img.shields.io/badge/streamlit-0.69-red.svg)](https://discuss.streamlit.io/t/version-0-69-0-the-1-year-anniversary-release/6116)
 [![Altair 4.10](https://img.shields.io/badge/altair-4.10-green.svg)](https://altair-viz.github.io/)
 
 ## References :flashlight:
